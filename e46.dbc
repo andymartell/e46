@@ -1,0 +1,122 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: DME_Etc 
+BO_ 790 DME1: 8 DME_Etc
+   SG_ RPM : 16|16@1+ (0.156,0) [0|0] "" DME_Etc
+   SG_ Torque_before_interventions : 32|8@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Torque_after_interventions : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Torque_loss_of_consumers : 40|8@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Ignition_on_DME_ready : 2|1@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Key : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Starter : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ AC_Clutch : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 809 DME2: 8 DME_Etc
+   SG_ Engine_Temp : 8|8@1+ (0.75,-48.373) [0|0] "deg_c" DME_Etc
+   SG_ Throttle_Position : 40|8@1+ (1,0) [0|0] "%" DME_Etc
+   SG_ Cycling_Number : 0|8@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Atmospheric_Pressure : 16|8@1+ (2,597) [0|0] "mbar" DME_Etc
+   SG_ Driver_Desired_Torque : 32|8@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Brake_Light_Switch : 48|1@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Brake_Light_Switch_Error : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Clutch_Switch : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Engine_Running : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1557 IKE: 8 DME_Etc
+   SG_ OutsideTemp : 24|8@1+ (1,0) [0|0] "deg_c" DME_Etc
+
+BO_ 1349 DME4: 8 DME_Etc
+   SG_ Fuel_Consumption : 8|16@1+ (1,0) [0|0] "mpg" DME_Etc
+   SG_ Charge_Light : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Oil_Pressure_Light : 44|1@1+ (1,0) [0|0] "" DME_Etc
+
+BO_ 1555 Instrument_Cluster: 8 DME_Etc
+   SG_ Odometer : 0|16@1+ (10,0) [0|0] "" DME_Etc
+   SG_ Fuel_Level : 16|8@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Running_Clock : 24|16@1+ (1,0) [0|0] "Seconds" DME_Etc
+
+BO_ 496 ABS_1: 8 DME_Etc
+   SG_ Wheel_1_Left_Front_Speed : 0|12@1+ (0.0625,0) [0|0] "" DME_Etc
+   SG_ Wheel_2_Right_Front_Speed : 16|12@1+ (0.0625,0) [0|0] "" DME_Etc
+   SG_ Wheel_3_Left_Rear_Speed : 32|12@1+ (0.0625,0) [0|0] "" DME_Etc
+   SG_ Wheel_4_Right_Rear_Speed : 48|12@1+ (0.0625,0) [0|0] "" Vector__XXX
+
+BO_ 501 Steering_Angle_Sensor: 8 DME_Etc
+   SG_ Steering_Angle : 0|15@1+ (0.045,0) [0|0] "" DME_Etc
+   SG_ Steering_Angle_Velocity : 16|15@1+ (0.045,0) [0|0] "" DME_Etc
+   SG_ Steering_Angle_Direction : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Steering_Angle_Velocity_Direction : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 339 ASC_1: 8 DME_Etc
+   SG_ Speed : 11|13@1+ (1,9.94) [0|0] "" DME_Etc
+   SG_ Brake_Pedal_Pressed : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+   SG_ Tyre_Pressure_Set : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 824 DME3: 8 DME_Etc
+   SG_ Throttle_Position : 40|8@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Clutch : 24|1@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Engine_Running : 28|1@1+ (1,0) [0|0] "" DME_Etc
+   SG_ Brake_Switch : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "isj1939dbc" INT 0 0;
+BA_ "GenMsgBackgroundColor" BO_ 790 "#ffffff";
+BA_ "GenMsgForegroundColor" BO_ 790 "#000000";
+BA_ "GenMsgBackgroundColor" BO_ 809 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 1557 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 1349 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 1555 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 496 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 501 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 339 "#ffffff";
+BA_ "GenMsgBackgroundColor" BO_ 824 "#ffffff";
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "isj1939dbc" 0;
+VAL_ 790 Ignition_on_DME_ready 1 "On" 0 "Off";
+VAL_ 790 Key 0 "Off" 1 "On";
+VAL_ 790 Starter 0 "Off" 1 "On";
+VAL_ 790 AC_Clutch 0 "Off" 1 "On";
+VAL_ 809 Brake_Light_Switch 1 "Pressed" 0 "Not_Pressed";
+VAL_ 809 Brake_Light_Switch_Error 0 "Off" 1 "Error!!";
+VAL_ 809 Clutch_Switch 0 "Not_pressed" 1 "Pressed";
+VAL_ 809 Engine_Running 0 "Not_running" 1 "Running";
+VAL_ 1349 Charge_Light 0 "Off" 1 "On";
+VAL_ 1349 Oil_Pressure_Light 0 "Off" 1 "On";
+VAL_ 339 Brake_Pedal_Pressed 0 "Not_pressed" 1 "Pressed";
+VAL_ 824 Clutch 0 "Not_pressed" 1 "Pressed";
+VAL_ 824 Engine_Running 0 "Not_running" 1 "Running";
+VAL_ 824 Brake_Switch 0 "Not_pressed" 1 "Pressed";
